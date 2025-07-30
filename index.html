@@ -121,6 +121,7 @@
   </section>
 
   <section class="product-categories">
+    <button class="slider-btn left-btn">&#8592;</button>
   <div class="cat-card">
     <a href="/phones">
       <img src="https://resources.cdn-kaspi.kz/img/cnt/m/n/b698f0a2-59ab-4b91-9bbe-08714373be5a-Phone.png" alt="Телефоны и гаджеты">
@@ -151,7 +152,25 @@
       <p>Товары для дома</p>
     </a>
   </div>
+    <button class="slider-btn right-btn">&#8594;</button>
+
 </section>
+
+<script>
+  const leftBtn = document.querySelector('.left-btn');
+  const rightBtn = document.querySelector('.right-btn');
+  const slider = document.querySelector('.slider-track');
+
+  leftBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: -200, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: 200, behavior: 'smooth' });
+  });
+    console.log('Скрипт работает!');
+
+</script>
 
 </body>
 </html>
